@@ -42,11 +42,6 @@ body > div > * {
   padding: 2rem;
 }
 
-.parallax-slider {
-  opacity: 0.5;
-  padding: 0;
-}
-
 /* Light Scheme ------------------------------------------------------------------ */
 
 .scheme-light {
