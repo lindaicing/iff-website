@@ -21,7 +21,7 @@ $(document).ready(function(){
     $("#menu").click(function() { $(".nav-section ul").toggleClass("open"); });
     $( window ).resize(function() {
         let width = $(document).width();
-        if (width > 768) {
+        if (width > 600) {
             $(".nav-section ul").removeClass("open");
         }
     });
