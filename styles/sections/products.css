@@ -145,4 +145,8 @@
     }
     .products-items > * > * { margin-bottom: 0; }
     .products-items > * > * h3 { font-size: 1.8em; }
+    .products-items > * > * h3,
+    .products-items > * > * p {
+        margin: 1rem;
+    }
 }
