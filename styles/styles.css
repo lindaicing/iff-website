@@ -12,6 +12,7 @@
   --green: #4D652F;
   --greenTranslucent: #4D652Faa;
   --grey: #A69F9F;
+  --greyTranslucent: #A69F9F80;
   --light: #FAFAFA;
   --lightTranslucent: #FAFAFAE8;
 
@@ -46,66 +47,6 @@ body > div > * {
   body > div > * { padding: 1rem; }
 }
 
-/* Light Scheme ------------------------------------------------------------------ */
-
-.scheme-light {
-  background: var(--light);
-  color: var(--dark);
-}
-
-.scheme-light a { color: var(--green); }
-.scheme-light a:hover { color: var(--dark); }
-
-.scheme-light a.button, 
-.scheme-light .button, 
-.scheme-light button {
-  border: 0.2rem solid var(--green);
-  color: var(--green);
-}
-
-.scheme-light a.button::before, 
-.scheme-light .button::before, 
-.scheme-light button::before {
-  background: var(--grey); /* HAS BUG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-}
-
-/* Dark Scheme ------------------------------------------------------------------- */
-
-.scheme-dark {
-  background: var(--dark);
-  color: var(--light);
-}
-
-.scheme-dark a { color: var(--lightTranslucent); }
-.scheme-dark a:hover { color: #fff; }
-
-.scheme-dark a.button, .scheme-dark .button, .scheme-dark button {
-  border: 0.2rem solid var(--light);
-  color: var(--light);
-}
-
-.scheme-dark input {
-  border: 0.2rem solid var(--light);
-  background: var(--dark);
-  color: var(--light);
-}
-
-.scheme-dark a.button::before, 
-.scheme-dark .button::before, 
-.scheme-dark button::before {
-  background: var(--green);
-}
-
-.scheme-dark ::placeholder,
-.scheme-dark ::-ms-input-placeholder {
-  color: var(--lightTranslucent);
-  opacity: 1;
-}
-
-.scheme-dark input:focus {
-  background-color: var(--green);
-}
-
 /* Typography -------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
@@ -129,41 +70,50 @@ a {
   transition-timing-function: var(--transition-timing-function);
 }
 
-a.button, .button, button {
+a.button, .button, button, input.button {
   position: relative;
   display: inline-block;
   padding: 0.25rem 1rem 0.5rem 1rem;
   font-family: 'Gruppo', sans-serif;
+  background: none;
   outline: none;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1em;
   border-radius: 0;
   cursor: pointer;
+  z-index: 1;
 }
 
 a.button::before, 
 .button::before, 
-button::before {
+button::before, 
+input.button::before  {
   content: '';
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
+  width: 0%;
   height: 100%;
   z-index: -1;
 }
 
-.button::before, button::before {
+.button::before, button::before, input.button::before  {
   transition: var(--transition);
   transition-timing-function: var(--transition-timing-function);
 }
 
 a.button:hover::before, 
 .button:hover::before, 
-button:hover::before {
+button:hover::before, 
+input.button:hover::before {
   width: 100%;
+}
+
+input.button::before {
+  background: none;
+  border-radius: 0;
 }
 
 ::selection {
@@ -177,4 +127,68 @@ button:hover::before {
 @media only screen and (max-width: 600px) {
   .showOnMobile { display: flex !important; }
   .hideOnMobile { display: none !important; }
+}
+
+/* Light Scheme ------------------------------------------------------------------ */
+
+.scheme-light {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.scheme-light a { color: var(--green); }
+.scheme-light a:hover { color: var(--dark); }
+
+.scheme-light a.button, 
+.scheme-light .button, 
+.scheme-light button, 
+.scheme-light input.button {
+  border: 0.2rem solid var(--green);
+  color: var(--green);
+}
+
+.scheme-light a.button::before, 
+.scheme-light .button::before, 
+.scheme-light button::before, 
+.scheme-light input.button::before {
+  background: var(--greyTranslucent); /* HAS BUG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+}
+
+/* Dark Scheme ------------------------------------------------------------------- */
+
+.scheme-dark {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.scheme-dark a { color: var(--lightTranslucent); }
+.scheme-dark a:hover { color: #fff; }
+
+.scheme-dark a.button, .scheme-dark .button, .scheme-dark button, .scheme-dark input.button {
+  border: 0.2rem solid var(--light);
+  color: var(--light);
+}
+
+.scheme-dark input {
+  border: 0.2rem solid var(--light);
+  background: var(--dark);
+  color: var(--light);
+}
+
+.scheme-dark a.button::before, 
+.scheme-dark .button::before, 
+.scheme-dark button::before, 
+.scheme-dark input.button::before {
+  background: var(--green);
+}
+
+.scheme-dark ::placeholder,
+.scheme-dark ::-ms-input-placeholder {
+  color: var(--lightTranslucent);
+  opacity: 1;
+}
+
+.scheme-dark input:focus {
+  background-color: var(--green);
 }
