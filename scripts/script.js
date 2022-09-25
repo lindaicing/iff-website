@@ -38,5 +38,17 @@ $(document).ready(function(){
     //         }
     //     })
     // });
+
+    //Try this one
+    var myElement = document.getElementById('my-element');
+    var bounding = myElement.getBoundingClientRect();
+    function elementInViewport() {
+        var bounding = myElement.getBoundingClientRect();
+        if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+            console.log('Element is in the viewport!');
+        } else {
+            console.log('Element is NOT in the viewport!');
+        }
+    }
 })
 
