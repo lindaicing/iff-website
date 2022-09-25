@@ -58,6 +58,7 @@
     .nav-section ul {
         flex-direction: column;
         position: relative;
+        padding-bottom: 0.5rem;
         align-items: flex-end;
         text-align: right;
         width: 100%;
