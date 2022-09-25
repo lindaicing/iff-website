@@ -17,6 +17,15 @@ $(document).ready(function(){
         $("#products-toggle-list").append(renderedtags);
     }
 
+    
+    $("#menu").click(function() { $(".nav-section ul").toggleClass("open"); });
+    $( window ).resize(function() {
+        let width = $(document).width();
+        if (width > 768) {
+            $(".nav-section ul").removeClass("open");
+        }
+    });
+
     // $( window ).scroll(function() {
     //     $(".product-item").each(function( i ){
     //         if ( $(this).is(":visible") ) {

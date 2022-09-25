@@ -32,8 +32,6 @@
     width: 100%;
     font-size: 1.25em;
     justify-content: space-around;
-    opacity: 0;
-    height: 0;
 }
 
 .nav-section ul li {
@@ -45,17 +43,32 @@
     padding: 0rem 1rem 0.5 1rem;
 }
 
+
+#menu {
+    margin: 0.5em 0;
+    align-self: flex-end;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
+    .nav-section ul {
+        opacity: 0;
+        margin-top: -100%;
+        transition: var(--transition);
+        transition-timing-function: var(--transition-timing-function);
+        pointer-events: none;
+    }
+    .nav-section ul.open{
+        opacity: 1;
+        margin-top: 0;
+        pointer-events: auto;
+    }
     .nav-section > * {
         align-items: flex-start;
     }
     .nav-section span {
         flex-direction: column;
-    }
-    #menu {
-        margin: 0.5em 0;
-        align-self: flex-end;
-        font-size: 1.5em;
     }
     .nav-section ul {
         flex-direction: column;
