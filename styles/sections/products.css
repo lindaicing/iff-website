@@ -1,4 +1,63 @@
 /* Products ---------------------------------------------------------------------- */
 
-.products-section {
+.products-section > * {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 6rem 2rem;
 }
+
+.products-toggle,
+.products-items {
+    width: 100%;
+    max-width: 50%;
+}
+
+/* Column 1 - Products Items ----------------------------------------------------- */
+
+.products-toggle {
+    position: sticky !important;
+    top: 6rem;
+    max-height: 50vh;
+}
+
+.products-toggle h2 {
+    margin-top: 4rem;
+}
+
+
+/* Column 2 - Products Items ----------------------------------------------------- */
+
+.products-items > * {
+    display: block;
+    margin-bottom: 5rem;
+    padding-bottom: 1rem;
+    background: var(--light) !important;
+    color: var(--dark) !important;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.products-items > *:hover {
+    background: var(--lightTranslucent) !important;
+    color: var(--green) !important;
+}
+
+.products-items > * h3,
+.products-items > * p {
+    margin: 1rem 2rem;
+}
+
+.products-items > * h3 {
+    font-weight: 600;
+    font-size: 2.2em;
+}
+
+
+.products-items > * img {
+    width: 100%;
+    max-height: 15rem;
+    object-fit: cover;
+    object-position: center;
+}
+

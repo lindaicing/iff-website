@@ -7,14 +7,17 @@
 
 :root {
   --dark: #1F1E1E;
-  --darkTranslucent: #1F1E1Ef8;
+  --darkTranslucent: #1F1E1EEE;
   --green: #4D652F;
   --grey: #A69F9F;
   --light: #FAFAFA;
+  --lightTranslucent: #FAFAFAE8;
+
+  --transition: all 0.175s cubic-bezier(0.5, 0, 0.5, 1);
+  --transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 html {
-  --dark: #1F1E1E;
   scroll-behavior: smooth;
 }
 
@@ -52,12 +55,8 @@ body > div > * {
 }
 
 .parallax-slider {
-  width: 120vw !important;
-  height: 120vh !important;
   opacity: 0.5;
-
-  object-fit: cover;
-  object-position: center;
+  padding: 0;
 }
 
 /* Light Scheme ------------------------------------------------------------------ */
@@ -67,13 +66,20 @@ body > div > * {
   color: var(--dark);
 }
 
-.scheme-light a.button, .scheme-light .button, .scheme-light button {
+.scheme-light a { color: var(--green); }
+.scheme-light a:hover { color: var(--dark); }
+
+.scheme-light a.button, 
+.scheme-light .button, 
+.scheme-light button {
   border: 0.2rem solid var(--green);
   color: var(--green);
 }
 
-.scheme-light input {
-
+.scheme-light a.button::before, 
+.scheme-light .button::before, 
+.scheme-light button::before {
+  background: var(--grey); /* HAS BUG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 }
 
 /* Dark Scheme ------------------------------------------------------------------- */
@@ -83,7 +89,8 @@ body > div > * {
   color: var(--light);
 }
 
-.scheme-dark a { color: var(--light); }
+.scheme-dark a { color: var(--lightTranslucent); }
+.scheme-dark a:hover { color: #fff; }
 
 .scheme-dark a.button, .scheme-dark .button, .scheme-dark button {
   border: 0.2rem solid var(--light);
@@ -96,6 +103,11 @@ body > div > * {
   color: var(--light);
 }
 
+.scheme-dark a.button::before, 
+.scheme-dark .button::before, 
+.scheme-dark button::before {
+  background: var(--green);
+}
 
 /* Typography -------------------------------------------------------------------- */
 
@@ -103,16 +115,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Gruppo', sans-serif;
 }
 
-h1 { font-size: 5em; }
+h1 { font-size: 6em; }
 h2 { font-size: 4em; }
 h3 { font-size: 3em; }
 h4 { font-size: 2em; }
 h5 { font-size: 1.5em; }
 h6 { font-size: 1.2em; }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none; 
+  transition: var(--transition);
+  transition-timing-function: var(--transition-timing-function);
+}
 
 a.button, .button, button {
+  position: relative;
   display: inline-block;
   padding: 0.25rem 1rem 0.5rem 1rem;
   font-family: 'Gruppo', sans-serif;
@@ -120,4 +137,32 @@ a.button, .button, button {
   font-size: 2rem;
   font-weight: 600;
   line-height: 1em;
+}
+
+a.button::before, 
+.button::before, 
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.button::before, button::before {
+  transition: var(--transition);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+a.button:hover::before, 
+.button:hover::before, 
+button:hover::before {
+  width: 100%;
+}
+
+::selection {
+  background: var(--green);
+  color: var(--grey);
 }

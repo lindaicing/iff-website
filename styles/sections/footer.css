@@ -1,4 +1,27 @@
 /* Footer ------------------------------------------------------------------------ */
 
-.footer-section {
+.footer-section > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section .socials a {
+    margin-right: 0.5rem;
+}
+
+.footer-section .emailForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section .emailForm #email {
+    margin: 0.25rem 1rem;
+    padding: 0.4rem;
+}
+
+.footer-section .button {
+    font-size: 1em;
+    padding: 0rem 1rem 0.5 1rem;
 }
