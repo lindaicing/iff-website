@@ -41,7 +41,7 @@
         height: 100vh;
         opacity: .4; 
         z-index: -1;
-        background: url(https://images.unsplash.com/photo-1655635949348-953b0e3c140a?w=1000&w=2000&fit=crop) no-repeat center center;
+        background: url(https://images.unsplash.com/photo-1655635949348-953b0e3c140a) no-repeat center center;
         background-attachment: fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
