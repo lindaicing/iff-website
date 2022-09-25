@@ -138,14 +138,11 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .products-items {
-        margin-top: 0;
-    }
+    .products-items { margin-top: 0; }
     .products-items > * {
         margin-top: 0;
         margin-bottom: 3rem;
     }
-    .products-items > * > * {
-        margin-bottom: 0;
-    }
+    .products-items > * > * { margin-bottom: 0; }
+    .products-items > * > * h3 { font-size: 1.5em; }
 }
