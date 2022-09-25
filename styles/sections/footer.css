@@ -1,6 +1,7 @@
 /* Footer ------------------------------------------------------------------------ */
 
 .footer-section > * {
+    padding: 4rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,5 +38,6 @@
     .footer-section .emailForm { flex-direction: column; width: 100%; }
     .footer-section .emailForm #email {
         width: 100%;
+        text-align: center;
     }
 }

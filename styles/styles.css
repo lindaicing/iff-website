@@ -10,6 +10,7 @@
   --dark: #1F1E1E;
   --darkTranslucent: #1F1E1EEE;
   --green: #4D652F;
+  --greenTranslucent: #4D652Faa;
   --grey: #A69F9F;
   --light: #FAFAFA;
   --lightTranslucent: #FAFAFAE8;
@@ -119,6 +120,10 @@ h4 { font-size: 2em; }
 h5 { font-size: 1.5em; }
 h6 { font-size: 1.2em; }
 
+p, li {
+  line-height: 1.5em;
+}
+
 a { 
   text-decoration: none; 
   transition: var(--transition);
@@ -162,14 +167,14 @@ button:hover::before {
 }
 
 ::selection {
-  background: var(--green);
-  color: var(--grey);
+  background: var(--greenTranslucent);
+  color: var(--light);
 }
 
-.showOnMobile { display: none; }
-.hideOnMobile { display: flex; }
+.showOnMobile { display: none !important; }
+.hideOnMobile { display: flex !important; }
 
 @media only screen and (max-width: 600px) {
-  .showOnMobile { display: flex; }
-  .hideOnMobile { display: none; }
+  .showOnMobile { display: flex !important; }
+  .hideOnMobile { display: none !important; }
 }

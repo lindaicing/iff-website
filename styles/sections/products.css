@@ -13,7 +13,7 @@
     max-width: 50%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .products-section > * { 
         flex-direction: column; 
         padding: 2rem 2rem 0rem 2rem;
@@ -25,15 +25,60 @@
 
 .products-toggle {
     position: sticky !important;
-    top: 5rem;
+    top: 10rem;
     max-height: 50vh;
+    padding-right: 1rem;
 }
 
-.products-toggle h2 {
-    margin-top: 4rem;
+#products-toggle-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.35rem;
+    padding-left: 1rem;
+    border-left: solid 1px var(--green);
+
 }
+
+#products-toggle-list li {
+    padding: 1.75rem 0 0 1rem;
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+
+#products-toggle-list li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1rem;
+    top: 2.7rem;
+    width: 1rem;
+    height: 1px;
+    background: var(--green);
+}
+
+
+#products-toggle-list li.currentProductShown a {
+    color: (--grey) !important;
+}
+
+/* .currentProductShown {
+    font-weight: 600;
+} */
 
 @media only screen and (max-width: 768px) {
+    .products-toggle h2 {
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .products-toggle {
+        position: sticky;
+        top: 5rem;
+        max-height: 50vh;
+        padding-right: 0;
+    }
     .products-toggle h2 {
         margin-top: 0;
         padding-bottom: 2rem;
@@ -44,9 +89,18 @@
 
 /* Column 2 - Products Items ----------------------------------------------------- */
 
+.products-items {
+    margin-top: -10rem;
+}
+
 .products-items > * {
+    margin-top: 10rem;
+    scroll-margin-top: 10rem !important;
+}
+
+.products-items > * > * {
     display: block;
-    margin-bottom: 5rem;
+    margin-bottom: 12rem;
     padding-bottom: 1rem;
     background: var(--light) !important;
     color: var(--dark) !important;
@@ -54,25 +108,41 @@
     overflow: hidden;
 }
 
-.products-items > *:hover {
+.products-items > * > *:last-child {
+    margin-bottom: 4rem;
+}
+
+.products-items > * > *:hover {
     background: var(--lightTranslucent) !important;
     color: var(--green) !important;
 }
 
-.products-items > * h3,
-.products-items > * p {
+.products-items > * > * h3,
+.products-items > * > * p {
     margin: 1rem 2rem;
 }
 
-.products-items > * h3 {
+.products-items > * > * h3 {
     font-weight: 600;
     font-size: 2.2em;
 }
 
-
-.products-items > * img {
+.products-items > * > * img {
     width: 100%;
     max-height: 15rem;
     object-fit: cover;
     object-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .products-items {
+        margin-top: 0;
+    }
+    .products-items > * {
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+    .products-items > * > * {
+        margin-bottom: 0;
+    }
 }

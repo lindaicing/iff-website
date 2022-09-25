@@ -22,10 +22,15 @@
     margin-left: 0.25rem;
 }
 
+.nav-section span {
+    display: flex;
+    width: 40%;
+}
+
 .nav-section ul {
     display: flex;
+    width: 100%;
     font-size: 1.25em;
-    width: 40%;
     justify-content: space-around;
 }
 
@@ -36,4 +41,29 @@
 .nav-section .button {
     font-size: 1.2em;
     padding: 0rem 1rem 0.5 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-section > * {
+        align-items: flex-start;
+    }
+    .nav-section span {
+        flex-direction: column;
+    }
+    #menu {
+        margin: 0.5em 0;
+        align-self: flex-end;
+        font-size: 1.5em;
+    }
+    .nav-section ul {
+        flex-direction: column;
+        position: relative;
+        align-items: flex-end;
+        text-align: right;
+        width: 100%;
+    }
+    .nav-section ul li { margin: 0; }
+    .nav-section ul li .button {
+        margin: 0.5rem 0;
+    }
 }

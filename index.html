@@ -14,12 +14,16 @@
 <body>
     <div class="nav-section scheme-dark"><nav>
         <img class="logo" src="./resources/logo-light.png" alt="Logo">
-        <ul>
-            <li><a href="">Publications</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-        <a class="button" href="">Login/Signup</a>
+        <span>
+            <i id="menu" class="fa-solid fa-bars showOnMobile"></i>
+            <ul>
+                <li><a href="">Publications</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li class="showOnMobile"><a class="button" href="">Login/Signup</a></li>
+            </ul>
+        </span>
+        <a class="button hideOnMobile" href="">Login/Signup</a>
     </nav></div>
 
     <div class="hero-section scheme-dark"><header class="hero">
@@ -31,40 +35,40 @@
     <div class="products-section scheme-dark"><div>
         <div class="products-toggle">
             <h2>Products</h2>
-            <ul id="products-toggle-list">
+            <ul id="products-toggle-list" class="hideOnMobile">
                 <!--dynamically load in-->
             </ul>
         </div>
         <div class="products-items">
-            <a href="#" target="_blank">
+            <div class="product-item"><a href="#" target="_blank">
                 <img src="https://images.unsplash.com/photo-1638258581353-0ab658542e73?w=1000&h=1000&fit=crop" alt="QAOA Max Cut Protein Pruning">
                 <h3>QAOA Max Cut Protein Pruning</h3>
                 <p>Sugar café au lait cinnamon, caffeine grounds, et aftertaste macchiato acerbic lungo aged. Redeye, beans variety, french press, galão aged bar  cultivar froth.</p>
-            </a>
+            </a></div>
 
-            <a href="#" target="_blank">
+            <div class="product-item"><a href="#" target="_blank">
                 <img src="https://images.unsplash.com/photo-1638258581353-0ab658542e73?w=1000&h=1000&fit=crop" alt="QAOA Max Cut Protein Pruning">
                 <h3>Gausiann Boson Sampling Protein Binding</h3>
                 <p>Sugar café au lait cinnamon, caffeine grounds, et aftertaste macchiato acerbic lungo aged. Redeye, beans variety, french press, galão aged bar  cultivar froth.</p>
-            </a>
+            </a></div>
 
-            <a href="#" target="_blank">
+            <div class="product-item"><a href="#" target="_blank">
                 <img src="https://images.unsplash.com/photo-1638258581353-0ab658542e73?w=1000&h=1000&fit=crop" alt="Hypercomplex Flow">
                 <h3>Hypercomplex Flow</h3>
                 <p>Sugar café au lait cinnamon, caffeine grounds, et aftertaste macchiato acerbic lungo aged. Redeye, beans variety, french press, galão aged bar  cultivar froth.</p>
-            </a>
+            </a></div>
 
-            <a href="#" target="_blank">
+            <div class="product-item"><a href="#" target="_blank">
                 <img src="https://images.unsplash.com/photo-1638258581353-0ab658542e73?w=1000&h=1000&fit=crop" alt="Chemical homomorphisms with Quantum Annealing">
                 <h3>Chemical homomorphisms with Quantum Annealing</h3>
                 <p>Sugar café au lait cinnamon, caffeine grounds, et aftertaste macchiato acerbic lungo aged. Redeye, beans variety, french press, galão aged bar  cultivar froth.</p>
-            </a>
+            </a></div>
 
-            <a href="#" target="_blank">
+            <div class="product-item"><a href="#" target="_blank">
                 <img src="https://images.unsplash.com/photo-1638258581353-0ab658542e73?w=1000&h=1000&fit=crop" alt="Multi-Omic Literature Analysis with Social Media">
                 <h3>Multi-Omic Literature Analysis with Social Media</h3>
                 <p>Sugar café au lait cinnamon, caffeine grounds, et aftertaste macchiato acerbic lungo aged. Redeye, beans variety, french press, galão aged bar  cultivar froth.</p>
-            </a>
+            </a></div>
         </div>
     </div></div>
 
