@@ -3,6 +3,7 @@
 @import "./sections/nav.css";
 @import "./sections/hero.css";
 @import "./sections/products.css";
+@import "./sections/announcements.css";
 @import "./sections/footer.css";
 
 :root {
@@ -38,20 +39,6 @@ body > div > * {
   max-width: 1024px;
   width: 100%;
   padding: 2rem;
-}
-
-/* Sections ---------------------------------------------------------------------- */
-
-.announcement {
-  background: var(--light);
-  color: var(--dark);
-}
-
-.announcement > * {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .parallax-slider {
@@ -109,6 +96,16 @@ body > div > * {
   background: var(--green);
 }
 
+.scheme-dark ::placeholder,
+.scheme-dark ::-ms-input-placeholder {
+  color: var(--lightTranslucent);
+  opacity: 1;
+}
+
+.scheme-dark input:focus {
+  background-color: var(--green);
+}
+
 /* Typography -------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
@@ -137,12 +134,14 @@ a.button, .button, button {
   font-size: 2rem;
   font-weight: 600;
   line-height: 1em;
+  cursor: pointer;
 }
 
 a.button::before, 
 .button::before, 
 button::before {
   content: '';
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -165,4 +164,12 @@ button:hover::before {
 ::selection {
   background: var(--green);
   color: var(--grey);
+}
+
+.showOnMobile { display: none; }
+.hideOnMobile { display: flex; }
+
+@media only screen and (max-width: 600px) {
+  .showOnMobile { display: flex; }
+  .hideOnMobile { display: none; }
 }

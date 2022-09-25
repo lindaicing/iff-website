@@ -25,3 +25,17 @@
     font-size: 1em;
     padding: 0rem 1rem 0.5 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .footer-section > * { flex-direction: column; }
+    .footer-section .emailForm {
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer-section .emailForm { flex-direction: column; width: 100%; }
+    .footer-section .emailForm #email {
+        width: 100%;
+    }
+}

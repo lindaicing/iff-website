@@ -1,0 +1,17 @@
+.announcement {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.announcement > * {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .announcement > * { flex-direction: column; }
+    .announcement .button { margin: 1rem 0; }
+}
+  
