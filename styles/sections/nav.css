@@ -32,6 +32,8 @@
     width: 100%;
     font-size: 1.25em;
     justify-content: space-around;
+    opacity: 0;
+    height: 0;
 }
 
 .nav-section ul li {
