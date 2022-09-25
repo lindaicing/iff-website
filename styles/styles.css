@@ -1,14 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Mulish:ital,wght@0,200;1,200&display=swap');
 @import "reset.css"; 
+@import "./sections/nav.css";
+@import "./sections/hero.css";
+@import "./sections/products.css";
+@import "./sections/footer.css";
+
+:root {
+  --dark: #1F1E1E;
+  --darkTranslucent: #1F1E1Ef8;
+  --green: #4D652F;
+  --grey: #A69F9F;
+  --light: #FAFAFA;
+}
+
+html {
+  --dark: #1F1E1E;
+}
 
 body {
   margin: auto;
-  font-family: sans-serif;
+  font-family: 'Mulish', sans-serif;
+  background: var(--dark);
+  color: var(--light);
 }
 
-div {
+body > div {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-/****/
+body > div > * {
+  max-width: 1024px;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Sections ---------------------------------------------------------------------- */
+
+.announcement {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.announcement > * {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Light Scheme ------------------------------------------------------------------ */
+
+.scheme-light {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.scheme-light a.button, .scheme-light .button, .scheme-light button {
+  border: 0.2rem solid var(--green);
+  color: var(--green);
+}
+
+.scheme-light input {
+
+}
+
+/* Dark Scheme ------------------------------------------------------------------- */
+
+.scheme-dark {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.scheme-dark a { color: var(--light); }
+
+.scheme-dark a.button, .scheme-dark .button, .scheme-dark button {
+  border: 0.2rem solid var(--light);
+  color: var(--light);
+}
+
+.scheme-dark input {
+  border: 0.2rem solid var(--light);
+  background: var(--dark);
+  color: var(--light);
+}
+
+
+/* Typography -------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gruppo', sans-serif;
+}
+
+h1 { font-size: 5em; }
+h2 { font-size: 4em; }
+h3 { font-size: 3em; }
+h4 { font-size: 2em; }
+h5 { font-size: 1.5em; }
+h6 { font-size: 1.2em; }
+
+a { text-decoration: none; }
+
+a.button, .button, button {
+  display: inline-block;
+  padding: 0.25rem 1rem 0.5rem 1rem;
+  font-family: 'Gruppo', sans-serif;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1em;
+}

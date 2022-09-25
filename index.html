@@ -4,84 +4,85 @@
 <head>
     <meta charset="utf-8">
     <title>Title</title>
-    <link href="styles/stylesheet.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
 </head>
 
 <body>
-    <div id="top">
-        <nav>
-            <img src="" alt="Logo">
-            <ul>
-                <li><a href="">Publications</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+    <div class="nav-section scheme-dark"><nav>
+        <img src="" alt="Logo">
+        <ul>
+            <li><a href="">Publications</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <a class="button" href="">Login/Signup</a>
+    </nav></div>
+
+    <div class="hero-section scheme-dark parallax-container"><header class="hero parallax">
+        <h1>iff Technologies</h1>
+        <p>Fast, precise protein analysis, bundled in a strong drug discovery platform.</p>
+        <a class="button" href="">About iff</a>
+    </header></div>
+
+    <div class="products-section scheme-dark"><div>
+        <div class="products-toggle">
+            <h2>Products</h2>
+            <ul id="products-toggle-list">
+                <!--dynamically load in-->
             </ul>
-            <a class="button" href="">Login/Signup</a>
-        </nav>
-
-        <header class="hero">
-            <h1>iff Technologies</h1>
-            <a class="button" href="">About iff</a>
-        </header>
-
-        <div class="products">
-            <div class="products-toggle">
-                <h2>Products</h2>
-                <ul id="products-toggle-list"></ul> //dynamically load in
+        </div>
+        <div class="products-items">
+            <div>
+                <img src="" alt="">
+                <h3>QAOA Max Cut Protein Pruning</h3>
+                <p></p>
             </div>
-            <div class="products-items">
-                <div>
-                    <img src="" alt="">
-                    <h3>QAOA Max Cut Protein Pruning</h3>
-                    <p></p>
-                </div>
 
-                <div>
-                    <img src="" alt="">
-                    <h3>Hypercomplex Flow</h3>
-                    <p></p>
-                </div>
+            <div>
+                <img src="" alt="">
+                <h3>Hypercomplex Flow</h3>
+                <p></p>
+            </div>
 
-                <div>
-                    <img src="" alt="">
-                    <h3>Hypercomplex Flow</h3>
-                    <p></p>
-                </div>
+            <div>
+                <img src="" alt="">
+                <h3>Hypercomplex Flow</h3>
+                <p></p>
+            </div>
 
-                <div>
-                    <img src="" alt="">
-                    <h3>Chemical homomorphisms with Quantum Annealing</h3>
-                    <p></p>
-                </div>
+            <div>
+                <img src="" alt="">
+                <h3>Chemical homomorphisms with Quantum Annealing</h3>
+                <p></p>
+            </div>
 
-                <div>
-                    <img src="" alt="">
-                    <h3>Multi-Omic Literature Analysis with Social Media</h3>
-                    <p></p>
-                </div>
+            <div>
+                <img src="" alt="">
+                <h3>Multi-Omic Literature Analysis with Social Media</h3>
+                <p></p>
             </div>
         </div>
+    </div></div>
 
-        <div class="publications">
-            <h2>Publications</h2>
-            <a class="button" href="">Learn More</a>
+    <div class="publications-section announcement scheme-light"><div>
+        <h2>Publications</h2>
+        <a class="button" href="">Learn More</a>
+    </div></div>
+
+    <div class="footer-section scheme-dark"><footer>
+        <div class="socials">
+            <a href="https://www.linkedin.com/company/ifftech" targer="_blank">LinkedIn</a>
+            <a href="https://github.com/IffTech" targer="_blank">Github</a>
         </div>
-
-        <footer>
-            <div class="socials">
-                <a href="https://www.linkedin.com/company/ifftech" targer="_blank">LinkedIn</a>
-                <a href="https://github.com/IffTech" targer="_blank">Github</a>
-            </div>
-            <form class="emailForm">
-                <label for="email">Sign up for our mailing list:</label><br>
-                <input type="text" id="email" name="email"><br>
-                <input class="button" type="submit" value="Sign Up">
-            </form>
-            <a class="btt" href="#top">^</a>
-        </footer>
-    </div>
+        <form class="emailForm">
+            <label for="email">Sign up for our mailing list:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <input class="button" type="submit" value="Sign Up">
+        </form>
+        <a class="btt" href="#top">^</a>
+    </footer></div>
 </body>
 
 </html>

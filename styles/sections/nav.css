@@ -1,0 +1,20 @@
+/* Nav --------------------------------------------------------------------------- */
+
+.nav-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: var(--darkTranslucent) !important;
+    font-family: 'Gruppo', sans-serif;
+}
+
+.nav-section > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-section ul {
+    display: flex;
+}
