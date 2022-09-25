@@ -134,6 +134,7 @@ a.button, .button, button {
   font-size: 2rem;
   font-weight: 600;
   line-height: 1em;
+  border-radius: 0;
   cursor: pointer;
 }
 
