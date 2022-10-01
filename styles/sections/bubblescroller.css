@@ -1,6 +1,9 @@
 /* Bubble Scroller --------------------------------------------------------------------- */
 
-.bubblescroller-section > * { position: relative; }
+.bubblescroller-section > * { 
+    position: relative; 
+    padding: 0 2rem;
+}
 
 .bubblescroller-items {
     position: relative;
