@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Mulish:ital,wght@0,200;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Mulish:ital,wght@0,200;0,600;1,200&display=swap');
 @import "reset.css"; 
 @import "./sections/nav.css";
 @import "./sections/hero.css";
@@ -62,6 +62,10 @@ h6 { font-size: 1.2em; }
 
 p, li {
   line-height: 1.5em;
+}
+
+.bolded a {
+  font-weight: 600;
 }
 
 a { 

@@ -1,6 +1,16 @@
 $(document).ready(function(){
     $('.hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1655635949348-953b0e3c140a'});
+    
+    $("#menu").click(function() { $(".nav-section ul").toggleClass("open"); });
+    $( window ).resize(function() {
+        let width = $(document).width();
+        if (width > 600) {
+            $(".nav-section ul").removeClass("open");
+        }
+    });
 
+    /* Product Tags ---------------------------------------------------------------------------------- */
+    
     updateH3Tags();
     function updateH3Tags(){
         let tags = [];
@@ -17,37 +27,23 @@ $(document).ready(function(){
         $("#products-toggle-list").append(renderedtags);
     }
 
-    
-    $("#menu").click(function() { $(".nav-section ul").toggleClass("open"); });
-    $( window ).resize(function() {
-        let width = $(document).width();
-        if (width > 600) {
-            $(".nav-section ul").removeClass("open");
-        }
+    $( window ).scroll(function() {
+        $(".product-item").each(function( i ){
+            let currentProduct = ".product-item:nth-child(" + (i+1) + ")";
+            linkListProducts($(currentProduct), i);
+        })
     });
 
-    // $( window ).scroll(function() {
-    //     $(".product-item").each(function( i ){
-    //         if ( $(this).is(":visible") ) {
-    //             let currentProductListItem = "#products-toggle-list li:nth-child(" + (i+1) + ")";
-    //             $(currentProductListItem).addClass("currentProductShown")
-    //         } else {
-    //             $("#products-toggle-list li").each(function (j){
-    //                 $(this).removeClass("currentProductShown");
-    //             });
-    //         }
-    //     })
-    // });
+    function linkListProducts(element, listIndex){
+        let currentListItemString = "#products-toggle-list li:nth-child(" + (listIndex + 1) + ")";
 
-    //Try this one
-    var myElement = document.getElementById('my-element');
-    var bounding = myElement.getBoundingClientRect();
-    function elementInViewport() {
-        var bounding = myElement.getBoundingClientRect();
+        let bounding = element.get(0).getBoundingClientRect();
         if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-            console.log('Element is in the viewport!');
+            //Element is in the viewport
+            $(currentListItemString).addClass("bolded");
         } else {
-            console.log('Element is NOT in the viewport!');
+            //Element is NOT in the viewport
+            $(currentListItemString).removeClass("bolded");
         }
     }
 })
