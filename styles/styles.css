@@ -13,6 +13,7 @@
   --greenTranslucent: #4D652Faa;
   --grey: #A69F9F;
   --greyTranslucent: #A69F9F80;
+  --greyLight: #c0bbbb;
   --light: #FAFAFA;
   --lightTranslucent: #FAFAFAE8;
 
@@ -120,6 +121,11 @@ input.button::before {
   border-radius: 0;
 }
 
+hr {
+  margin: 2rem 0;
+  opacity: 0.5;
+}
+
 ::selection {
   background: var(--greenTranslucent);
   color: var(--light);
@@ -166,8 +172,9 @@ input.button::before {
   color: var(--light);
 }
 
-.scheme-dark a { color: var(--lightTranslucent); }
-.scheme-dark a:hover { color: #fff; }
+.scheme-dark p { color: var(--greyLight) }
+.scheme-dark a { color: var(--light); }
+.scheme-dark a:hover { color: var(--lightTranslucent); }
 
 .scheme-dark a.button, .scheme-dark .button, .scheme-dark button, .scheme-dark input.button {
   border: 0.2rem solid var(--light);
