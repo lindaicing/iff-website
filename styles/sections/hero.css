@@ -9,6 +9,11 @@
     text-align: center;
 }
 
+.hero-inner {
+    padding-top: 5rem;
+    height: 50vh;
+}
+
 .parallax-slider {
     opacity: 0.5;
     padding: 0;
@@ -41,11 +46,26 @@
         height: 100vh;
         opacity: .4; 
         z-index: -1;
-        background: url(https://images.unsplash.com/photo-1655635949348-953b0e3c140a) no-repeat center center;
         background-attachment: fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+
+    #publications-page .hero-section::before {
+        background: url(https://images.unsplash.com/photo-1655635949348-953b0e3c140a) no-repeat center center;
+    }
+    #publications-page .hero-section::before {
+        background: url(https://images.unsplash.com/photo-1655993810480-c15dccf9b3a0) no-repeat center center;
+    }
+    #about-page .hero-section::before {
+        background: url(https://images.unsplash.com/photo-1656331797721-b593b8f00297) no-repeat center center;
+    }
+    #contact-page .hero-section::before {
+        background: url(https://images.unsplash.com/photo-1655474396177-e727349f44dc) no-repeat center center;
+    }
+    #error-page .hero-section::before {
+        background: url(https://images.unsplash.com/photo-1530128051436-3ab3663a4683) no-repeat center center;
     }
 }

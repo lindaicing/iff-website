@@ -1,5 +1,9 @@
 $(document).ready(function(){
-    $('.hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1655635949348-953b0e3c140a'});
+    $('#home-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1655635949348-953b0e3c140a'});
+    $('#publications-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1655993810480-c15dccf9b3a0'});
+    $('#about-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1656331797721-b593b8f00297'});
+    $('#contact-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1655474396177-e727349f44dc'});
+    $('#error-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1530128051436-3ab3663a4683'});
     
     $("#menu").click(function() { $(".nav-section ul").toggleClass("open"); });
     $( window ).resize(function() {
