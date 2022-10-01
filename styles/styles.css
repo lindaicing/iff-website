@@ -79,17 +79,13 @@ p, li {
 .content-section h5 a,
 .content-section h6 a {
   font-weight: 400;
-  text-decoration: none; 
+  border-bottom: none !important;
 }
 
 a { 
   text-decoration: none; 
   transition: var(--transition);
   transition-timing-function: var(--transition-timing-function);
-}
-
-.content-section a { 
-  text-decoration: underline;
 }
 
 a.button, .button, button, input.button {
@@ -165,6 +161,7 @@ hr {
 
 .scheme-light a { color: var(--greenVivid); }
 .scheme-light a:hover { color: var(--dark); }
+.content-section.scheme-light a { border-bottom: solid 1px var(--greenVivid);}
 
 .scheme-light a.button, 
 .scheme-light .button, 
@@ -178,8 +175,7 @@ hr {
 .scheme-light .button::before, 
 .scheme-light button::before, 
 .scheme-light input.button::before {
-  background: var(--greyTranslucent); /* HAS BUG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
+  background: var(--greyTranslucent);
 }
 
 /* Dark Scheme ------------------------------------------------------------------- */
@@ -190,8 +186,10 @@ hr {
 }
 
 .scheme-dark p { color: var(--greyLight) }
+
 .scheme-dark a { color: var(--light); }
 .scheme-dark a:hover { color: var(--lightTranslucent); }
+.content-section.scheme-dark a { border-bottom: solid 1px var(--light); }
 
 .scheme-dark a.button, .scheme-dark .button, .scheme-dark button, .scheme-dark input.button {
   border: 0.2rem solid var(--light);
