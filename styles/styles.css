@@ -11,6 +11,7 @@
   --darkTranslucent: #1F1E1EEE;
   --green: #4D652F;
   --greenTranslucent: #4D652Faa;
+  --greenVivid: #628537;
   --grey: #A69F9F;
   --greyTranslucent: #A69F9F80;
   --greyLight: #c0bbbb;
@@ -41,7 +42,7 @@ body > div {
 body > div > * {
   max-width: 1024px;
   width: 100%;
-  padding: 2rem;
+  padding: 4rem 2rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -52,27 +53,43 @@ body > div > * {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Gruppo', sans-serif;
+  margin-bottom: 1rem;
 }
 
 h1 { font-size: 6em; }
 h2 { font-size: 3.8em; }
 h3 { font-size: 3em; }
-h4 { font-size: 2em; }
-h5 { font-size: 1.5em; }
-h6 { font-size: 1.2em; }
+h4 { font-size: 2.5em; }
+h5 { font-size: 2em; }
+h6 { font-size: 1.5em; }
 
 p, li {
   line-height: 1.5em;
 }
 
-.bolded a {
+.bolded a,
+.content-section a {
   font-weight: 600;
+}
+
+.content-section h1 a,
+.content-section h2 a,
+.content-section h3 a,
+.content-section h4 a,
+.content-section h5 a,
+.content-section h6 a {
+  font-weight: 400;
+  text-decoration: none; 
 }
 
 a { 
   text-decoration: none; 
   transition: var(--transition);
   transition-timing-function: var(--transition-timing-function);
+}
+
+.content-section a { 
+  text-decoration: underline;
 }
 
 a.button, .button, button, input.button {
@@ -146,7 +163,7 @@ hr {
   color: var(--dark);
 }
 
-.scheme-light a { color: var(--green); }
+.scheme-light a { color: var(--greenVivid); }
 .scheme-light a:hover { color: var(--dark); }
 
 .scheme-light a.button, 

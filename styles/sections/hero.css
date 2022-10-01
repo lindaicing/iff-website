@@ -27,6 +27,12 @@
 .hero-section p {
     margin-bottom: 2.5rem;
     font-size: 1.5em;
+    color: var(--light) !important;
+}
+
+#contact-page .hero-section i {
+    font-size: 1.5em;
+    margin: 1rem 0.5rem;
 }
 
 @media only screen and (max-width: 960px) {
