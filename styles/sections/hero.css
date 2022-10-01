@@ -59,7 +59,7 @@
         background-size: cover;
     }
 
-    #publications-page .hero-section::before {
+    #home-page .hero-section::before {
         background: url(https://images.unsplash.com/photo-1655635949348-953b0e3c140a) no-repeat center center;
     }
     #publications-page .hero-section::before {
