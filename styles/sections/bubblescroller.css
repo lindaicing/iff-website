@@ -1,0 +1,140 @@
+/* Bubble Scroller --------------------------------------------------------------------- */
+
+.bubblescroller-section > * { position: relative; }
+
+.bubblescroller-items {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .bubblescroller-toggle, .bubblescroller-items { max-width: 100%;}
+}
+
+/* Column 1 - bubblescroller Items ----------------------------------------------------- */
+
+#bubblescroller-toggle-list {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 10rem;
+    left: 1rem;
+    margin-left: 0.35rem;
+    padding-left: 0.5rem;
+    width: 100%;
+    z-index: 1;
+}
+
+#bubblescroller-toggle-list::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    left: -0.05rem;
+    width: 1px;
+    height: calc(100% - 2rem);
+    z-index: -1;
+}
+
+#bubblescroller-toggle-list::before,
+#bubblescroller-toggle-list li::before {
+    background: var(--grey);
+}
+#bubblescroller-toggle-list li.bolded::before {
+    background: var(--green);
+}
+#bubblescroller-toggle-list::before { opacity: 0.5; }
+
+#bubblescroller-toggle-list li {
+    padding: 1rem;
+    position: relative;
+    max-width: 95vw;
+}
+
+#bubblescroller-toggle-list li a {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    background: var(--darkTranslucent);
+    color: var(--light);
+    margin-left: -2.5rem;
+    margin-top: -0.75rem;
+    padding: 0.25rem 1rem 0.25rem 1.75rem;
+    border-bottom: none;
+    border-radius: 100rem;
+    font-weight: 200;
+    z-index: -1;
+}
+
+#bubblescroller-toggle-list li a:hover { opacity: 1; }
+
+#bubblescroller-toggle-list li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -0.75rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#bubblescroller-toggle-list li a {
+    font-size: 0.9em;
+}
+
+#bubblescroller-toggle-list li.currentbubblescrollerhown a {
+    color: (--grey) !important;
+}
+
+@media only screen and (max-width: 1054px) {
+    #bubblescroller-toggle-list.hideOnMobile { display: none !important; }
+}
+
+@media only screen and (max-width: 768px) {
+    .bubblescroller-toggle h2 {
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .bubblescroller-toggle {
+        position: sticky;
+        top: calc(5rem + 0.2rem);
+        max-height: 50vh;
+        padding-right: 0;
+    }
+    .bubblescroller-toggle h2 {
+        margin-top: 0;
+        padding-bottom: 2rem;
+        background: var(--darkTranslucent);
+        text-align: center;
+    }
+}
+
+/* Column 2 - bubblescroller Items ----------------------------------------------------- */
+
+.bubblescroller-item {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--grey);
+}
+
+.bubblescroller-item > * { margin: -15rem 0 2rem 0; }
+.bubblescroller-item h4 { padding-top: 10rem; }
+.bubblescroller-item h4 a { margin-top: -10rem; }
+
+.bubblescroller-item:last-child { border-bottom: none; }
+
+@media only screen and (max-width: 600px) {
+    .bubblescroller-item {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .bubblescroller-item > * { margin: auto 0; }
+    .bubblescroller-item h4 { padding-top: 0; }
+    .bubblescroller-item h4 a { margin-top: 0; }
+}
