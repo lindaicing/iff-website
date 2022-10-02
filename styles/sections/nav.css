@@ -68,6 +68,7 @@
         transition: var(--transition);
         transition-timing-function: var(--transition-timing-function);
         pointer-events: none;
+        font-size: 1.2em;
     }
     .nav-section ul.open{
         opacity: 1;

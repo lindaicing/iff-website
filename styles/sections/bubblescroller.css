@@ -21,7 +21,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 10rem;
+    top: calc(50% - 6rem);
     left: 1rem;
     padding-bottom: 0.25rem;
     margin-left: 0.35rem;
@@ -55,6 +55,7 @@
     padding: 1rem;
     position: relative;
     max-width: 95vw;
+    line-height: 1.5em;
 }
 
 #bubblescroller-toggle-list li a {
@@ -78,7 +79,7 @@
     content: '';
     display: block;
     position: absolute;
-    margin-top: -0.25rem;
+    top: calc(50% - 0.25rem);
     left: -0.75rem;
     width: 0.5rem;
     height: 0.5rem;
