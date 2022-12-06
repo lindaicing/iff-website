@@ -1,9 +1,9 @@
 $(document).ready(function(){
-    $('#home-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1655635949348-953b0e3c140a'});
-    $('#publications-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1655993810480-c15dccf9b3a0'});
-    $('#about-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1656331797721-b593b8f00297'});
+    $('#home-page .hero-section').parallax({imageSrc: './resources/banners/banner-home.jpg'});
+    $('#publications-page .hero-section').parallax({imageSrc: './resources/banners/banner-publications.jpg'});
+    $('#about-page .hero-section').parallax({imageSrc: './resources/banners/banner-about.jpg'});
     $('#contact-page .hero-section').parallax({imageSrc: './resources/banners/banner3.jpg'});
-    $('#error-page .hero-section').parallax({imageSrc: 'https://images.unsplash.com/photo-1530128051436-3ab3663a4683'});
+    $('#error-page .hero-section').parallax({imageSrc: './resources/banners/banner-error.jpg'});
     
     $("#menu").click(function() { $(".nav-section ul").toggleClass("open"); });
     $( window ).resize(function() {
